@@ -6,9 +6,9 @@ import Link from "next/link";
 import { footerLinks } from "@/constants";
 
 const Footer = () => (
-  <footer className='flex flex-col text-white  mt-5 border-t border-gray-100'>
-    <div className='flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10'>
-      <div className='flex flex-col justify-start items-start gap-6'>
+  <footer className='footer'>
+    <div className='footer__links-container'>
+      <div className='footer__rights'>
         <Image src='/newlogo.png' alt='logo' width={118} height={18} className='object-contain' />
         <p className='text-base text-white'>
           Carhub 2023 <br/>
@@ -20,7 +20,7 @@ const Footer = () => (
         {footerLinks.map((item) => (
           <div key={item.title} className="footer__link">
             <h3 className="font-bold">{item.title}</h3>
-            <div className="flex flex-col gap-5">
+            <div className="footer__item">
               {item.links.map((link) => (
                 <Link
                   key={link.title}
